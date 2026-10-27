@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Space Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#0e172a" />
+      <stop offset="50%" stop-color="#080e1a" />
+      <stop offset="100%" stop-color="#020617" />
+    </radialGradient>
+
+    <!-- Sun Glow Gradient -->
+    <radialGradient id="sunGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fffbeb" />
+      <stop offset="40%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#ea580c" />
+    </radialGradient>
+
+    <!-- Earth Gradient -->
+    <radialGradient id="earthGrad" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="60%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#1e3a8a" />
+    </radialGradient>
+
+    <!-- Moon Gradient -->
+    <radialGradient id="moonGrad" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="70%" stop-color="#cbd5e1" />
+      <stop offset="100%" stop-color="#64748b" />
+    </radialGradient>
+
+    <!-- Tidal Wave Gradient -->
+    <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#06b6d4" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.5" />
+    </linearGradient>
+
+    <!-- Orbit ring dash pattern -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)" />
+
+  <!-- Stars Background -->
+  <circle cx="80" cy="100" r="2" fill="#fff" opacity="0.6"/>
+  <circle cx="430" cy="90" r="1.5" fill="#fff" opacity="0.8"/>
+  <circle cx="410" cy="380" r="2.5" fill="#38bdf8" opacity="0.7"/>
+  <circle cx="100" cy="400" r="1.8" fill="#fff" opacity="0.5"/>
+  <circle cx="260" cy="70" r="2" fill="#fef08a" opacity="0.6"/>
+  <circle cx="470" cy="220" r="1.5" fill="#fff" opacity="0.7"/>
+
+  <!-- Orbital Ellipses -->
+  <ellipse cx="256" cy="256" rx="180" ry="85" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-dasharray="6 8" opacity="0.4" transform="rotate(-18 256 256)" />
+
+  <!-- Sun in upper right -->
+  <circle cx="390" cy="130" r="42" fill="url(#sunGrad)" filter="url(#glow)" />
+  <circle cx="390" cy="130" r="58" fill="none" stroke="#f59e0b" stroke-width="1.5" opacity="0.3" stroke-dasharray="4 6" />
+
+  <!-- Earth Tidal Bulge Ellipse (Water envelope) -->
+  <ellipse cx="256" cy="270" rx="94" ry="72" fill="url(#waveGrad)" transform="rotate(-22 256 270)" opacity="0.5" />
+
+  <!-- Earth Core -->
+  <circle cx="256" cy="270" r="62" fill="url(#earthGrad)" />
+  
+  <!-- Earth Continents sketch -->
+  <path d="M 235 240 Q 250 230 265 245 Q 275 255 260 270 Q 245 280 230 265 Z" fill="#22c55e" opacity="0.65"/>
+  <path d="M 270 280 Q 285 275 295 290 Q 280 305 265 295 Z" fill="#22c55e" opacity="0.6"/>
+
+  <!-- Moon in orbit lower left -->
+  <circle cx="120" cy="330" r="26" fill="url(#moonGrad)" filter="url(#glow)" />
+  <!-- Moon crater -->
+  <circle cx="114" cy="324" r="5" fill="#94a3b8" opacity="0.5"/>
+  <circle cx="126" cy="336" r="3.5" fill="#94a3b8" opacity="0.5"/>
+
+  <!-- Tidal Wave Crest at base -->
+  <path d="M 120 440 C 180 400, 220 450, 256 420 C 292 390, 332 450, 392 410 L 392 460 C 332 500, 292 440, 256 470 C 220 500, 180 450, 120 490 Z" fill="#38bdf8" opacity="0.7" />
+  <path d="M 90 455 C 160 420, 200 465, 256 438 C 312 411, 352 465, 422 430 L 422 475 C 352 510, 312 456, 256 483 C 200 510, 160 465, 90 500 Z" fill="#0284c7" opacity="0.4" />
+</svg>

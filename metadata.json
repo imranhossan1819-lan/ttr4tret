@@ -1,0 +1,10 @@
+{
+  "name": "Remix জোয়ার ভাটা ও মহাজাগতিক ট্র্যাকার",
+  "description": "লাইভ লোকেশন ট্র্যাকিং সহ চাঁদের অবস্থান, সূর্যের অবস্থান, পৃথিবীর কক্ষপথ এবং নির্ভুল জোয়ার-ভাটা পর্যবেক্ষণ ও পূর্বাভাস।",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
